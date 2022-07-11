@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+:root{
+    --desaturatedRed: hsl(0, 36%, 70%);
+    --softRed: hsl(0, 93%, 68%);
+    --DarkGrayishRed: hsl(0, 6%, 24%);
+    --lineargradiant: linear-gradient(135deg,hsl(0, 0%, 100%) 0%,  hsl(0, 100%, 98%) 25%);
+    --lineargradiant2: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 25%);
+}
+body, html{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    background-color: #f2f2f2;
+}
+.container{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    background: var(--lineargradiant2);
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.row{
+    display: flex;
+    width: 50%;
+    padding: 18px 1vw;
+    flex-direction: column;
+    padding-left: 13vw;
+    justify-content: center;
+}
+.row2{
+    width: 45vw;
+}
+.row2 img{
+    width: 45vw;
+    height:100%;
+    object-fit: cover;
+}
+.logo img{
+    position: absolute;
+    width: 138px;
+    height: auto;
+    top: 81px;
+    left: 13vw;
+}
+.mobile{
+    display:none;
+}
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 4.5vw;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    line-height: 4.2rem;
+}
+h1 span{
+    color: var(--desaturatedRed);
+    font-weight: 300;
+}
+.desc{
+    color: var(--desaturatedRed);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size:16px;
+    margin: 17px 1px;
+    margin-bottom: 33px;
+    line-height: 1.5rem;
+}
+.input{
+    display:flex;
+    align-items: center;
+}
+.input input{
+    position: absolute;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    height: 46px;
+    width: 23vw;
+    padding-left: 31px;
+    border: var(--softRed) solid 1.5px;
+    color: var(--desaturatedRed);
+}
+.input button{
+    position: relative;
+    background-color: var(--softRed);
+    border: none;
+    height: 51px;
+    width: 7vw;
+    border-radius: 24px;
+    left: 22vw;
+    transition: all .3s ease-in;
+}
+.input button:hover{
+    background-color: var(--desaturatedRed);
+    cursor: pointer;
+    width:8vw;
+    height:55px;
+    z-index: 2;
+    border-radius: 27px;
+}
+.cont{
+    width:30vw;
+    margin-top:115px;
+}
+#errMsg{
+    position: relative;
+    bottom: -41px;
+    left: -82px;
+    color: var(--desaturatedRed)
+}
+#errImg{
+    position: relative;
+    left: 20vw;
+    display:none;
+}
+input:focus {
+    outline: none !important;
+    border:2px solid var(--desaturatedRed);
+}
+@media(max-width: 811px){
+    .container{
+        flex-direction: column-reverse;
+        height:100vh;
+    }
+    .row2{
+        width:100%;
+        height:400px;
+        margin-top:140vh;
+    }
+    .row2 img{
+        width: 100%;
+        height: 100%;
+        margin-top: 0vh;
+        object-fit: fill;
+    }
+    .mobile{
+        display:block;
+    }
+    .desktop{
+        display:none;
+    }
+    .logo img{
+        width: 15vh;
+        top: 53px;
+    }
+    .row{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        padding:0px;
+    }
+    .cont{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 81vw;
+        margin-top: 132px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .cont h1{
+        font-size: 10vw;
+    }
+    .desc{
+        font-size: 18px;
+    }
+    .row2 img{
+        margin-top: 9vh;
+    }
+    .input input{
+        left: 14vw;
+        width:64vw;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    
+    .input button{
+        width: 12vw;
+        left: 32vw;
+    }
+    .input button:hover{
+        width: 20vw;
+        height: 57px;
+    }
+    #errmsg{
+        left: 33vw;
+    }
+}
